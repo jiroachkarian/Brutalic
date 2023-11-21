@@ -1,0 +1,165 @@
+.column{
+    display: flex;
+    flex-direction: column;
+     width: 100%;
+    align-items: start;
+    text-align: start;
+
+}
+
+.text-wrap{
+    text-wrap: balance;
+    width: 60%;
+    margin-left: 1.5%;
+}
+
+.container-1{
+    width: 100%;
+    height: fit-content;
+     padding-block: 2em;
+    padding-inline: 1em;
+        text-wrap: balance;
+
+    
+}
+
+.text-start{
+    text-align: start;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+     justify-content: center;
+                  border-bottom: 1.5px solid var(--secondary);
+
+
+ 
+}
+.container-2{
+    width:20%;
+    height: auto;
+    padding-block: 2em;
+    padding-inline:1em ;
+    border-left: 1.5px solid var(--secondary);
+        position: relative;
+        
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .rectangle-container{
+    width: 80%;
+    height: 100%;
+    background-color: var(--secondary);
+    padding-top: 5em;
+    display: flex;
+    flex-direction:   column;
+}
+
+.p-absolute{
+    position: absolute;
+left: 20%;
+}
+
+.rect-2{
+border-top: 1px solid var(--primary);
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 2em;
+ 
+}
+
+@media (max-width:1220px) {
+    .row{
+            display: flex;
+    flex-direction: column;
+    height: fit-content;
+     justify-content: center;
+
+    }
+
+    .container-2{
+    width:100%;
+    height: 200px;
+    padding-block: 2em;
+    padding-inline:1em ;
+         border-bottom: 1.5px solid var(--secondary);
+        position: relative;
+
+}
+.p-absolute{
+    position: absolute;
+ left: 22.5%;
+}
+
+.text-wrap{
+     width: 90%;
+ }
+
+  .rectangle-container{
+     flex-direction:   row;
+
+}
+
+.carre-1{
+    border: 1px solid  var(--primary);
+
+}
+
+.rect-2{
+    align-items: start;
+         border-left: 0.5px solid var(--primary);
+     border-top: none;
+
+}
+}
+
+.text-end{
+    text-align: end;
+}
+
+.carre-1{
+    box-sizing: border-box;
+    padding: 0.5em 0.25em 0.5em 0.25em;
+    width: 150px;
+    height: 250px;
+border-bottom: 1px solid var(--primary);
+border-left:   1px solid  var(--primary);
+}
+
+.carre-2  button{
+    border: 0.5px solid var(--primary);
+    border-right: none;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+}
+
+.carre-2  button:hover{
+    border: none;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    background-color:var(--primary);
+
+ }
+
+.typo-color-dark:hover{
+    color: var(--secondary);
+}
+
+
+.carre-2{
+width: 150px;
+height: fit-content;
+}

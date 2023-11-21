@@ -1,0 +1,28 @@
+.credit{
+    width: 100%;
+    height: 5em;
+          position: relative;
+
+    
+}
+
+.bg-motion{
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    position: relative;
+}
+
+.t-motion{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: -30%;
+
+}
+
+.t-outline{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary);
+ 
+}

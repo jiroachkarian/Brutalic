@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Afc-regular";
+  src: url("./font/Afacad-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Afc-bold";
+  src: url("./font/Afacad-Bold.ttf");
+}
+
+:root {
+  --primary: #fff3d8;
+  --secondary: #0a0918;
+  --font-size-1: 12rem;
+  --font-size-2: 10rem;
+  --font-size-3: 1.25rem;
+  --font-size-mb-1: 6rem;
+  --font-size-mb-2: 4rem;
+  --font-size-md-1: 8rem;
+  --font-size-md-2: 6rem;
+  --font-size-mb-3: 1.25rem;
+}
+
+/* Applies typography styles to elements */
+@mixin apply-typography-style($style-name) {
+  $style: map-get($typography-styles, $style-name);
+  @if type-of($style) == map {
+    font-size: map-get($style, font-size);
+    font-family: map-get($style, font-family);
+    line-height: map-get($style, line-height);
+  } @else {
+    @error "Typography style '#{$style-name}' not found in $typography-styles.";
+  }
+}
+
+$typography-styles: (
+  fs-1: (
+    font-size: var(--font-size-1),
+    font-family: "Afc-bold",
+    line-height: 0.75em,
+  ),
+  fs-2: (
+    font-size: var(--font-size-2),
+    font-family: "Afc-regular",
+  ),
+  fs-3: (
+    font-size: var(--font-size-3),
+    font-family: "Afc-regular",
+  ),
+
+  fs-4: (
+    font-size: var(--font-size-3),
+    font-family: "Afc-bold",
+  ),
+
+  fs-mb-1: (
+    font-size: var(--font-size-mb-1),
+    font-family: "Afc-bold",
+    line-height: 0.75em,
+  ),
+  fs-mb-2: (
+    font-size: var(--font-size-md-2),
+    font-family: "Afc-regular",
+  ),
+  fs-mb-3: (
+    font-size: var(--font-size-mb-3),
+    font-family: "Afc-regular",
+  ),
+
+  fs-mb-4: (
+    font-size: var(--font-size-mb-3),
+    font-family: "Afc-bold",
+  ),
+);
+
+.fs-1 {
+  @include apply-typography-style(fs-1);
+  color: var(--secondary);
+}
+.fs-2 {
+  @include apply-typography-style(fs-2);
+}
+.fs-3 {
+  @include apply-typography-style(fs-3);
+  color: var(--secondary);
+}
+.fs-4 {
+  @include apply-typography-style(fs-4);
+  color: var(--secondary);
+}
+
+.fs-md-2 {
+  @include apply-typography-style(fs-mb-2);
+}
+
+@media (max-width: 1000px) {
+  .fs-1 {
+    @include apply-typography-style(fs-mb-1);
+    color: var(--secondary);
+  }
+  .fs-2 {
+    @include apply-typography-style(fs-mb-2);
+    color: var(--secondary);
+  }
+  .fs-3 {
+    @include apply-typography-style(fs-mb-3);
+    color: var(--secondary);
+  }
+  .fs-4 {
+    @include apply-typography-style(fs-mb-4);
+    color: var(--secondary);
+  }
+}

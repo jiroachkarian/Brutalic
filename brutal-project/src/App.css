@@ -1,0 +1,40 @@
+ *{
+    margin: 0;
+    padding: 0;
+overflow: hidden
+   }
+ 
+.typo-color-light{
+    color: var(--secondary);
+}
+.typo-color-dark{
+    color: var(--primary);
+}
+
+
+ .bg-color{
+    background-color: var(--primary);
+ }
+
+ section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1.5em;
+ }
+
+ .space-bet{
+   display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+ 
+.w-100{
+   width: 100%;
+}
+
+.gap-10{
+   gap: 1em;
+   display: flex;
+   flex-direction: column;
+}
